@@ -1,5 +1,6 @@
 import { useState, useEffect} from 'react';
 import * as API from './services/launches.jsx';
+import logo from './assets/spaceX-logo.png';
 
 export function App() {
     const [launches, setLaunches ] = useState([]);
@@ -9,6 +10,7 @@ export function App() {
 
     return (
         <>
+            <img src={logo} width={300} />
             <h1>SpaceX Launches</h1>
             <ul>
                 { launches.map(launch => (
@@ -18,7 +20,6 @@ export function App() {
                 ))}
             </ul>
         </>
-        
     )
 }
 
